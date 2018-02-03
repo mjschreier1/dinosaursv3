@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -9,6 +9,7 @@ import { JobDetailsComponent } from './components/job-details/job-details.compon
 import { InputFormComponent } from './components/input-form/input-form.component';
 import { PreviewComponent } from './components/preview/preview.component';
 
+import { JobsService } from './services/jobs.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { PreviewComponent } from './components/preview/preview.component';
     PreviewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [JobsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

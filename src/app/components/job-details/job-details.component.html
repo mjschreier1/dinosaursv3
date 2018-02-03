@@ -1,5 +1,9 @@
 <main>
   <section id="job-details">
     <h2>Job Details</h2>
+    <h4 *ngIf="jobs">{{jobs.title}}</h4>
+    <p *ngIf="jobs">{{jobs.description}}</p>
+    <app-input-form></app-input-form>
+    <app-preview></app-preview>
   </section>
 </main>

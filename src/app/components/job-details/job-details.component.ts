@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from '../../services/jobs.service'
+import { Jobs } from '../../models/Jobs'
 
 @Component({
   selector: 'app-job-details',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./job-details.component.css']
 })
 export class JobDetailsComponent implements OnInit {
+  jobs: Jobs;
 
-  constructor() { }
+  constructor(public jobsService: JobsService) { }
 
   ngOnInit() {
+    this.jobsService.getJobs().subscribe(jobs => {
+      this.jobs = jobs
+    })
   }
 
 }
