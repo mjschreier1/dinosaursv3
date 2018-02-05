@@ -1,4 +1,4 @@
-# Galvanize Dinosaurs - Apply
+# Galvanize Dinosaurs - Apply 
 
 ## Instructions
 
@@ -24,5 +24,7 @@
 3. Navigate to this folder and run `npm test`.
 
 #### Deployed Link
+http://dino3.surge.sh
 
 #### Framework of choice
+Angular 5
