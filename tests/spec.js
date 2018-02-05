@@ -2,7 +2,7 @@ describe("Form submission", () => {
     it("Has a job application page", () => {
         cy.visit("/");
 
-        cy.get("#application-preview").should("be.hidden");
+        cy.get("#application-preview").should("not.exist");
         cy.get("#preview-toggle").click();
         cy.get("#application-preview").should("not.be.hidden");
         cy.get("#application-preview").should("not.have.text");

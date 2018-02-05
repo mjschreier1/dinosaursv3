@@ -4,5 +4,5 @@
   <input id="submit" type="submit" value="Submit" />
 </form>
 <p [hidden]="showSuccessMessage || showErrorMessage">&nbsp;</p>
-<p *ngIf="showSuccessMessage">{{this.successMessage}}</p>
-<p *ngIf="showErrorMessage">{{this.errorMessage}}</p>
+<p id="message" *ngIf="showSuccessMessage">{{this.successMessage}}</p>
+<p id="message" *ngIf="showErrorMessage">{{this.errorMessage}}</p>
