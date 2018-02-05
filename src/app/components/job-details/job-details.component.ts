@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { JobsService } from '../../services/jobs.service'
-import { Jobs } from '../../models/Jobs'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { JobsService } from '../../services/jobs.service';
+import { Jobs } from '../../models/Jobs';
+import { InputFormComponent } from '../input-form/input-form.component';
 
 @Component({
   selector: 'app-job-details',
@@ -9,6 +10,7 @@ import { Jobs } from '../../models/Jobs'
 })
 export class JobDetailsComponent implements OnInit {
   jobs: Jobs;
+  @ViewChild(InputFormComponent) inputForm;
 
   constructor(public jobsService: JobsService) { }
 

@@ -1,3 +1,8 @@
-<p>
-  input-form works!
-</p>
+<form id="application-input" #jobForm="ngForm" (ngSubmit)="onSubmit(jobForm)">
+  <label>Apply Here: </label>
+  <textarea id="application-text" rows="8" cols="100" name="text" [(ngModel)]="text"></textarea>
+  <input id="submit" type="submit" value="Submit" />
+</form>
+<p [hidden]="showSuccessMessage || showErrorMessage">&nbsp;</p>
+<p *ngIf="showSuccessMessage">{{this.successMessage}}</p>
+<p *ngIf="showErrorMessage">{{this.errorMessage}}</p>

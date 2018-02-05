@@ -1,3 +1,2 @@
-<p>
-  preview works!
-</p>
+<button id="preview-toggle" (click)="togglePreview()">Show Preview</button>
+<section id="application-preview" class="hidden" *ngIf="showPreview">{{this.text}}</section>

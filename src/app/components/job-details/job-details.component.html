@@ -4,6 +4,6 @@
     <h4 *ngIf="jobs">{{jobs.title}}</h4>
     <p *ngIf="jobs">{{jobs.description}}</p>
     <app-input-form></app-input-form>
-    <app-preview></app-preview>
+    <app-preview [text]="this.inputForm.text"></app-preview>
   </section>
 </main>
